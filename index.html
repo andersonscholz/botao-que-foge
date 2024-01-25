@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>botão fujão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="texto"><h1>Sim ou não?</h1></div>
+        <div class="imagem"> <img src="foto.png" alt="" id="foto"></div>
+        <div class="botoes"> <button id="sim" onclick="mensagemsim()">SIM</button> <button id="nao" onmouseenter="mensagemnao()" onclick="sumir()">NÃO</button></div>
+    </div>
+</body>
+<script>
+    function mensagemsim(){
+        window.alert("Ótima escolha!")
+
+    }
+    function mensagemnao(){
+
+        // tentei fazer um sistema para randomizar diferente mas ficou errado e era um código burro
+        
+        // var randompos = Math.floor(Math.random() *100) +1
+        // if(randompos >50){
+        //     var ltor = lefttoright()"nao.style.marginRight = novapos + 'px'";
+        // }
+        // else{
+        //     var ltor = lefttoright"nao.style.marginRight = novapos + 'px'"
+        // }
+        var botao = document.getElementById('nao')
+        var novapos = calcularnovapos1()
+        var novapos2 = calcularnovapos2()
+        nao.style.marginLeft = novapos + 'px'
+        nao.style.marginTop = novapos2 + 'px'
+        }
+    function calcularnovapos1(){
+        var numeroaleatorio = Math.floor(Math.random() * 200) -100
+        var deslocamento = numeroaleatorio
+        var posatual = parseFloat(window.getComputedStyle(document.getElementById('nao')).marginLeft)
+        return posatual + deslocamento
+    }
+    function calcularnovapos2(){
+        var numeroaleatorio = Math.floor(Math.random() * 200) -100
+        var deslocamento = numeroaleatorio
+        var posatual = parseFloat(window.getComputedStyle(document.getElementById('nao')).marginLeft)
+        return posatual + deslocamento
+    }
+    function sumir(){
+        var suma = document.getElementById('nao') 
+        suma.style.display = 'none'
+        
+    }
+</script>
+</html>
